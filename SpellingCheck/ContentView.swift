@@ -32,8 +32,9 @@ class TestingWord {
     var correct = Spelled.unknown
     
     init(text: String) {
-        self.text = text
+        self.text = text.uppercased()
     }
+    static let example = TestingWord(text: "Hello")
 }
 
 class TestingDictionary: ObservableObject {
@@ -56,9 +57,9 @@ struct ContentView: View {
         
     @ObservedObject var dictionary = TestingDictionary(
         store:
-            [TestingWord(text: "one".uppercased()),
-             TestingWord(text: "two".uppercased()),
-             TestingWord(text: "three".uppercased())])
+            [TestingWord(text: "one"),
+             TestingWord(text: "two"),
+             TestingWord(text: "three")])
 
     
     @State private var typedWord: String = ""
@@ -143,13 +144,7 @@ struct ReportView: View {
     var body: some View {
         List {
             ForEach(0 ..< dictionary.store.count) { index in
-                HStack {
-                    Text("\(self.dictionary.store[index].correct.info.char)")
-                        .padding(.leading, 20)
-                        .foregroundColor(self.dictionary.store[index].correct.info.color)
-                    Text("\(self.dictionary.store[index].text)")
-                    Spacer()
-                }
+                ReportRow(word: self.dictionary.store[index])
             }
         }
     }
@@ -160,6 +155,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-
-    
