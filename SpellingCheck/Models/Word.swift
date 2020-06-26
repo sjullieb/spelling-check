@@ -8,11 +8,15 @@
 
 import Foundation
 
-struct Word {
-    var text: String
-    var correct: Bool?
+struct Test: Codable {
+    var name: String
+    var words: [Word]
     
-    init(text: String) {
-        self.text = text
-    }
+    static let example = Test(name: "Test 1", words: [Word.example])
+}
+
+struct Word: Codable, Hashable {
+    var text: String
+    
+    static let example = Word(text: "test")
 }

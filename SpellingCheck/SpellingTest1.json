@@ -1,0 +1,22 @@
+{
+    "name": "First test",
+    "words": [
+        {
+            "id": 1,
+            "text": "ONE"
+        },
+        {
+            "id": 2,
+            "text": "TWO"
+        },
+        {
+            "id": 3,
+            "text": "THREE"
+        },
+        {
+            "id": 4,
+            "text": "FOUR"
+        }
+    ]
+}
+
