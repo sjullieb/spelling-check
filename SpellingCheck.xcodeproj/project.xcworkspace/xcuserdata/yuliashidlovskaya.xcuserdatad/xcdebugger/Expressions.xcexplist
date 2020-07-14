@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Test.acceptWord(spelledWord:):ContentView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "progress">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ContentView.init():ContentView.swift">
       </ContextState>
       <ContextState

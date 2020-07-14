@@ -8,15 +8,23 @@
 
 import Foundation
 
-struct Test: Codable {
-    var name: String
+struct TestData: Codable {
+    var title: String
     var words: [Word]
-    
-    static let example = Test(name: "Test 1", words: [Word.example])
 }
 
 struct Word: Codable, Hashable {
     var text: String
-    
-    static let example = Word(text: "test")
+}
+ 
+struct WordResult: Hashable {
+    var word: String
+    var spelled: String
+    var resultType: ResultType
+}
+
+enum ResultType {
+    case incorrect
+    case correct
+    case notSpelled
 }

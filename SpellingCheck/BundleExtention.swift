@@ -1,5 +1,5 @@
 //
-//  Helper.swift
+//  BundleExtention.swift
 //  SpellingCheck
 //
 //  Created by Yulia Shidlovskaya on 6/20/20.
@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
 
 extension Bundle {
     func decode<T: Decodable>(_ type: T.Type, from file: String) -> T {
@@ -26,13 +25,5 @@ extension Bundle {
         }
 
         return loaded
-    }
-    
-    func speak(text: String) {
-        let speechSynthesizer = AVSpeechSynthesizer()
-        let speechUtterance: AVSpeechUtterance = AVSpeechUtterance(string: text)
-        speechUtterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
-        speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        speechSynthesizer.speak(speechUtterance)
     }
 }
