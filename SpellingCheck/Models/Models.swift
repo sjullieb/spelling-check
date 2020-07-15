@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TestData: Codable {
+struct Test: Codable {
     var title: String
     var words: [Word]
 }
