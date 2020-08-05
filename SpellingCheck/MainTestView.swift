@@ -13,14 +13,6 @@ struct MainTestView: View {
     
     var body: some View {
         VStack {
-//            switch test.mode {
-//            case TestViewModel.DisplayMode.test:
-//                TestView(test: test)
-//            case TestViewModel.DisplayMode.report:
-//                ReportView(results: test.getResults())
-//            case TestViewModel.DisplayMode.spelling:
-//                ReportView(results: test.getResults())
-//            }
             if test.mode == TestViewModel.DisplayMode.test
             {
                 TestView(test: test)

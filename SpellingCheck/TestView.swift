@@ -34,10 +34,7 @@ struct TestView: View {
                 .scaledToFit()
                 .frame(width: 50.0, height:50)
             }
-            
-//            Text("\(test.currentWord.text)")
-//                .opacity(correctWordOpacity)
-            
+         
             TextField("", text: $spelledWord)
                 .frame(height: 50)
                 .font(Font.system(size: 24, design: .default))
@@ -70,25 +67,6 @@ struct TestView: View {
         .padding()
         .multilineTextAlignment(.center)
     }
-
-//    var borderColor: Color {
-//        switch test.currentSpellingType {
-//        case .correct:
-//            return Color.green
-//        case .incorrect:
-//            return Color.red
-//        case .notSpelled:
-//            return Color.gray
-//        }
-//    }
-    
-//    var correctWordOpacity: Double {
-//        if (test.currentSpellingType == .incorrect) {
-//            return 1.0
-//        } else {
-//            return 0.0
-//        }
-//    }
 }
 
 struct TestView_Previews: PreviewProvider {

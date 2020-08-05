@@ -10,16 +10,11 @@ import SwiftUI
 
 struct ReportRow: View {
     let result: WordResult
-//    let word: String
-//    let char: String
-//    let color: Color
-////    let resultType: ResultType
-//    let spelled: String
     
     var body: some View {
         HStack {
             Text("\(symbol)")
-                .padding(.leading, 20)
+                .padding([.leading, .trailing], 20)
                 .foregroundColor(color)
             
             Text("\(result.word)")
@@ -55,9 +50,7 @@ struct ReportRow: View {
             return "?"
         }
     }
-    
 }
-
 
 struct ReportRow_Previews: PreviewProvider {
     static var previews: some View {
