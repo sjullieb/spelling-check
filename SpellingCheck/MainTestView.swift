@@ -9,15 +9,25 @@
 import SwiftUI
 
 struct MainTestView: View {
-    @ObservedObject var test = Test()
+    @ObservedObject var test = TestViewModel()
     
     var body: some View {
         VStack {
-            if test.mode == Test.DisplayMode.test
+//            switch test.mode {
+//            case TestViewModel.DisplayMode.test:
+//                TestView(test: test)
+//            case TestViewModel.DisplayMode.report:
+//                ReportView(results: test.getResults())
+//            case TestViewModel.DisplayMode.spelling:
+//                ReportView(results: test.getResults())
+//            }
+            if test.mode == TestViewModel.DisplayMode.test
             {
                 TestView(test: test)
-            } else if test.mode == Test.DisplayMode.report {
-                ReportView(results: test.getResults())
+            } else if test.mode == TestViewModel.DisplayMode.report {
+                ReportView(results: test.results)
+            } else if test.mode == TestViewModel.DisplayMode.spelling {
+                SpellingView(test: test)
             }
         }
     }

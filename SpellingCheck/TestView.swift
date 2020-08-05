@@ -11,10 +11,7 @@ import Foundation
 import SwiftUI
 
 struct TestView: View {
-    @ObservedObject var test: Test
-    
-    @State private var borderColor = Color.gray
-    @State private var correctWordOpacity = 0.0
+    @ObservedObject var test: TestViewModel
     @State private var spelledWord: String = ""
     
     var body: some View {
@@ -38,40 +35,25 @@ struct TestView: View {
                 .frame(width: 50.0, height:50)
             }
             
-            Text("\(test.words[test.progress].text)")
-                .opacity(correctWordOpacity)
+//            Text("\(test.currentWord.text)")
+//                .opacity(correctWordOpacity)
             
             TextField("", text: $spelledWord)
                 .frame(height: 50)
                 .font(Font.system(size: 24, design: .default))
-                .border(borderColor, width: 1)
+                .border(Color.gray, width: 1)
                 .animation(.easeIn(duration: 1))
                 .multilineTextAlignment(.center)
                 .autocapitalization(.allCharacters)
                 .disableAutocorrection(true)
 
             Button(action: {
-                let spelledCorrect = self.test.checkCorrectSpelling(of: self.spelledWord)
-                
-                withAnimation(.easeIn(duration: 0.5)) {
-                    self.borderColor = spelledCorrect ? Color.green : Color.red
-                    self.correctWordOpacity = spelledCorrect ? 0.0 : 1.0
-                }
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    self.borderColor = Color.gray
-                    self.correctWordOpacity = 0.0
-                    self.spelledWord = ""
-                    
-                    if !self.test.checkTestFinished() {
-                        self.test.speak()
-                    }
-                }
+                self.test.checkSpelling(word: self.spelledWord)
+                self.spelledWord = ""
             }) {
                 Text("Next")
                 .padding(10)
             }
-            .disabled(test.finished)
             
             Button(action: {
                 self.test.finish()
@@ -79,7 +61,6 @@ struct TestView: View {
                 Text("Finish")
                 .padding(10)
             }
-            .disabled(test.finished)
             
             Spacer()
         }
@@ -89,10 +70,29 @@ struct TestView: View {
         .padding()
         .multilineTextAlignment(.center)
     }
+
+//    var borderColor: Color {
+//        switch test.currentSpellingType {
+//        case .correct:
+//            return Color.green
+//        case .incorrect:
+//            return Color.red
+//        case .notSpelled:
+//            return Color.gray
+//        }
+//    }
+    
+//    var correctWordOpacity: Double {
+//        if (test.currentSpellingType == .incorrect) {
+//            return 1.0
+//        } else {
+//            return 0.0
+//        }
+//    }
 }
 
 struct TestView_Previews: PreviewProvider {
     static var previews: some View {
-        TestView(test: (Test.example))
+        TestView(test: (TestViewModel.example))
     }
 }

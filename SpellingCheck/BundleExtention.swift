@@ -26,4 +26,25 @@ extension Bundle {
 
         return loaded
     }
+    
+    func encode<T: Encodable>(_ data: T, to file: String) {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+
+        do {
+            let jsonData = try encoder.encode(data)
+
+            if let jsonString = String(data: jsonData, encoding: .utf8) {
+                print(jsonString)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+}
+
+extension Date {
+    static var currentTimeStamp: Int64{
+        return Int64(Date().timeIntervalSince1970 * 1000)
+    }
 }

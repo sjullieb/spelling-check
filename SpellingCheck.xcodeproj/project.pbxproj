@@ -10,7 +10,7 @@
 		3240897224A5C26A00565501 /* MainTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3240897124A5C26A00565501 /* MainTestView.swift */; };
 		3240897424A5C30000565501 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3240897324A5C30000565501 /* ReportView.swift */; };
 		3245668524BBD2E80002DE4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245668424BBD2E80002DE4B /* ContentView.swift */; };
-		3245668924BD10700002DE4B /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245668824BD10700002DE4B /* Test.swift */; };
+		3245668924BD10700002DE4B /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245668824BD10700002DE4B /* TestViewModel.swift */; };
 		329A7398249EACA40090B97D /* ReportRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329A7397249EACA40090B97D /* ReportRow.swift */; };
 		329A739D249EB4C00090B97D /* BundleExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329A739C249EB4C00090B97D /* BundleExtention.swift */; };
 		329A739F249F154F0090B97D /* SpellingTest1.json in Resources */ = {isa = PBXBuildFile; fileRef = 329A739E249F154F0090B97D /* SpellingTest1.json */; };
@@ -21,13 +21,14 @@
 		329DE6A424975772008957DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 329DE6A324975772008957DA /* Preview Assets.xcassets */; };
 		329DE6A724975772008957DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 329DE6A524975772008957DA /* LaunchScreen.storyboard */; };
 		32B9B81E24997DCB00BFE549 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9B81D24997DCB00BFE549 /* Models.swift */; };
+		32F10E3024D4D9B8006E744D /* SpellingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F10E2F24D4D9B8006E744D /* SpellingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3240897124A5C26A00565501 /* MainTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTestView.swift; sourceTree = "<group>"; };
 		3240897324A5C30000565501 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		3245668424BBD2E80002DE4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3245668824BD10700002DE4B /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		3245668824BD10700002DE4B /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		329A7397249EACA40090B97D /* ReportRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportRow.swift; sourceTree = "<group>"; };
 		329A739C249EB4C00090B97D /* BundleExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtention.swift; sourceTree = "<group>"; };
 		329A739E249F154F0090B97D /* SpellingTest1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SpellingTest1.json; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		329DE6A624975772008957DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		329DE6A824975772008957DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32B9B81D24997DCB00BFE549 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		32F10E2F24D4D9B8006E744D /* SpellingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				329A739E249F154F0090B97D /* SpellingTest1.json */,
 				329DE69E2497576F008957DA /* TestView.swift */,
 				3240897324A5C30000565501 /* ReportView.swift */,
+				32F10E2F24D4D9B8006E744D /* SpellingView.swift */,
 				329A7397249EACA40090B97D /* ReportRow.swift */,
 				32B9B81C2499770800BFE549 /* Models */,
 				329DE6A024975772008957DA /* Assets.xcassets */,
@@ -103,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				32B9B81D24997DCB00BFE549 /* Models.swift */,
-				3245668824BD10700002DE4B /* Test.swift */,
+				3245668824BD10700002DE4B /* TestViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,8 +197,9 @@
 				329DE69B2497576F008957DA /* AppDelegate.swift in Sources */,
 				32B9B81E24997DCB00BFE549 /* Models.swift in Sources */,
 				3240897224A5C26A00565501 /* MainTestView.swift in Sources */,
-				3245668924BD10700002DE4B /* Test.swift in Sources */,
+				3245668924BD10700002DE4B /* TestViewModel.swift in Sources */,
 				329DE69D2497576F008957DA /* SceneDelegate.swift in Sources */,
+				32F10E3024D4D9B8006E744D /* SpellingView.swift in Sources */,
 				329DE69F2497576F008957DA /* TestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
