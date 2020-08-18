@@ -28,41 +28,18 @@ struct WordResult: Hashable, Codable {
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
+        
         try container.encode(word, forKey: .word)
         try container.encode(spelled, forKey: .spelled)
         try container.encode(type.rawValue, forKey: .type)
     }
     
 //    init(from decoder: Decoder) throws {
-        
 //        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        let key = container.allKeys.first
 //
-//        switch key {
-//        case .word:
-//            self.word = .word
-//        case .spelled:
-//            self = .spelled
-//        case .result:
-//            self = ResultType(rawValue)
-//        default:
-//            throw DecodingError.dataCorrupted(
-//                DecodingError.Context(
-//                    codingPath: container.codingPath,
-//                    debugDescription: "Unabled to decode enum."
-//                )
-//            )
-//        }
-//    }
-    
-//    func encode(to encoder: Encoder) throws {
-//      var container = encoder.container(keyedBy: CodingKeys.self)
-//      try container.encode(name, forKey: .name)
-//      try container.encode(id, forKey: .id)
-//      // 4
-//      var giftContainer = container
-//        .nestedContainer(keyedBy: GiftKeys.self, forKey: .gift)
-//      try giftContainer.encode(favoriteToy, forKey: .toy)
+//        word = try container.decode(String.self, forKey: .word)
+//        spelled = try container.decode(String.self, forKey: .spelled)
+//        type = try container.decode(ResultType.self, forKey: .type)
 //    }
 }
 
