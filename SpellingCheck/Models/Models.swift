@@ -23,7 +23,7 @@ struct WordResult: Hashable, Codable {
     var type: ResultType
     
     enum CodingKeys: String, CodingKey {
-        case word, spelled, type//resultType = "result"
+        case word, spelled, type
     }
     
     func encode(to encoder: Encoder) throws {
