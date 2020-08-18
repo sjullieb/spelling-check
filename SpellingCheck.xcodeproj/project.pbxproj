@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3224D68824DAAB3E001B74CC /* SpellingCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3224D68724DAAB3E001B74CC /* SpellingCheckTests.swift */; };
 		3240897224A5C26A00565501 /* MainTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3240897124A5C26A00565501 /* MainTestView.swift */; };
 		3240897424A5C30000565501 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3240897324A5C30000565501 /* ReportView.swift */; };
 		3245668524BBD2E80002DE4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3245668424BBD2E80002DE4B /* ContentView.swift */; };
@@ -24,7 +25,28 @@
 		32F10E3024D4D9B8006E744D /* SpellingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F10E2F24D4D9B8006E744D /* SpellingView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3224D68A24DAAB3E001B74CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 329DE68F2497576F008957DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 329DE6962497576F008957DA;
+			remoteInfo = SpellingCheck;
+		};
+		3224D6A624DCBD44001B74CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 329DE68F2497576F008957DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 329DE6962497576F008957DA;
+			remoteInfo = SpellingCheck;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3224D68524DAAB3E001B74CC /* SpellingCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellingCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3224D68724DAAB3E001B74CC /* SpellingCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellingCheckTests.swift; sourceTree = "<group>"; };
+		3224D68924DAAB3E001B74CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3224D6A124DCBD44001B74CC /* SpellingCheckTests2.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellingCheckTests2.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3240897124A5C26A00565501 /* MainTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTestView.swift; sourceTree = "<group>"; };
 		3240897324A5C30000565501 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		3245668424BBD2E80002DE4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +67,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3224D68224DAAB3E001B74CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3224D69E24DCBD44001B74CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		329DE6942497576F008957DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,10 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3224D68624DAAB3E001B74CC /* SpellingCheckTests */ = {
+			isa = PBXGroup;
+			children = (
+				3224D68724DAAB3E001B74CC /* SpellingCheckTests.swift */,
+				3224D68924DAAB3E001B74CC /* Info.plist */,
+			);
+			path = SpellingCheckTests;
+			sourceTree = "<group>";
+		};
 		329DE68E2497576F008957DA = {
 			isa = PBXGroup;
 			children = (
 				329DE6992497576F008957DA /* SpellingCheck */,
+				3224D68624DAAB3E001B74CC /* SpellingCheckTests */,
 				329DE6982497576F008957DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				329DE6972497576F008957DA /* SpellingCheck.app */,
+				3224D68524DAAB3E001B74CC /* SpellingCheckTests.xctest */,
+				3224D6A124DCBD44001B74CC /* SpellingCheckTests2.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +169,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3224D68424DAAB3E001B74CC /* SpellingCheckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3224D68E24DAAB3E001B74CC /* Build configuration list for PBXNativeTarget "SpellingCheckTests" */;
+			buildPhases = (
+				3224D68124DAAB3E001B74CC /* Sources */,
+				3224D68224DAAB3E001B74CC /* Frameworks */,
+				3224D68324DAAB3E001B74CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3224D68B24DAAB3E001B74CC /* PBXTargetDependency */,
+			);
+			name = SpellingCheckTests;
+			productName = SpellingCheckTests;
+			productReference = 3224D68524DAAB3E001B74CC /* SpellingCheckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3224D6A024DCBD44001B74CC /* SpellingCheckTests2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3224D6AA24DCBD44001B74CC /* Build configuration list for PBXNativeTarget "SpellingCheckTests2" */;
+			buildPhases = (
+				3224D69D24DCBD44001B74CC /* Sources */,
+				3224D69E24DCBD44001B74CC /* Frameworks */,
+				3224D69F24DCBD44001B74CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3224D6A724DCBD44001B74CC /* PBXTargetDependency */,
+			);
+			name = SpellingCheckTests2;
+			productName = SpellingCheckTests2;
+			productReference = 3224D6A124DCBD44001B74CC /* SpellingCheckTests2.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		329DE6962497576F008957DA /* SpellingCheck */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 329DE6AB24975772008957DA /* Build configuration list for PBXNativeTarget "SpellingCheck" */;
@@ -144,10 +228,18 @@
 		329DE68F2497576F008957DA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = sjullieb;
 				TargetAttributes = {
+					3224D68424DAAB3E001B74CC = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 329DE6962497576F008957DA;
+					};
+					3224D6A024DCBD44001B74CC = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 329DE6962497576F008957DA;
+					};
 					329DE6962497576F008957DA = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -167,11 +259,27 @@
 			projectRoot = "";
 			targets = (
 				329DE6962497576F008957DA /* SpellingCheck */,
+				3224D68424DAAB3E001B74CC /* SpellingCheckTests */,
+				3224D6A024DCBD44001B74CC /* SpellingCheckTests2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3224D68324DAAB3E001B74CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3224D69F24DCBD44001B74CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		329DE6952497576F008957DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +294,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3224D68124DAAB3E001B74CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3224D68824DAAB3E001B74CC /* SpellingCheckTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3224D69D24DCBD44001B74CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		329DE6932497576F008957DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,6 +329,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3224D68B24DAAB3E001B74CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 329DE6962497576F008957DA /* SpellingCheck */;
+			targetProxy = 3224D68A24DAAB3E001B74CC /* PBXContainerItemProxy */;
+		};
+		3224D6A724DCBD44001B74CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 329DE6962497576F008957DA /* SpellingCheck */;
+			targetProxy = 3224D6A624DCBD44001B74CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		329DE6A524975772008957DA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -218,6 +354,86 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3224D68C24DAAB3E001B74CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpellingCheckTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YS.SpellingCheckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpellingCheck.app/SpellingCheck";
+			};
+			name = Debug;
+		};
+		3224D68D24DAAB3E001B74CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpellingCheckTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YS.SpellingCheckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpellingCheck.app/SpellingCheck";
+			};
+			name = Release;
+		};
+		3224D6A824DCBD44001B74CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpellingCheckTests2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YS.SpellingCheckTests2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpellingCheck.app/SpellingCheck";
+			};
+			name = Debug;
+		};
+		3224D6A924DCBD44001B74CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpellingCheckTests2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YS.SpellingCheckTests2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpellingCheck.app/SpellingCheck";
+			};
+			name = Release;
+		};
 		329DE6A924975772008957DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -373,6 +589,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3224D68E24DAAB3E001B74CC /* Build configuration list for PBXNativeTarget "SpellingCheckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3224D68C24DAAB3E001B74CC /* Debug */,
+				3224D68D24DAAB3E001B74CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3224D6AA24DCBD44001B74CC /* Build configuration list for PBXNativeTarget "SpellingCheckTests2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3224D6A824DCBD44001B74CC /* Debug */,
+				3224D6A924DCBD44001B74CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		329DE6922497576F008957DA /* Build configuration list for PBXProject "SpellingCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
