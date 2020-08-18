@@ -3,6 +3,39 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Test.acceptWord(spelledWord:):ContentView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "progress">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #4 in closure #1 in TestView.body.getter:TestView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "borderColor">
+            </PersistentString>
+            <PersistentString
+               value = "test.currentSpellingType">
+            </PersistentString>
+            <PersistentString
+               value = "borderColor == Color.green">
+            </PersistentString>
+            <PersistentString
+               value = "borderColor == Color.red">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Test.checkCorrectSpelling(of:):Test.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentSpellingType">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ContentView.init():ContentView.swift">
       </ContextState>
       <ContextState

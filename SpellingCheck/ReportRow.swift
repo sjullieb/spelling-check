@@ -9,25 +9,51 @@
 import SwiftUI
 
 struct ReportRow: View {
-    let word: Word
-    let correct: Spelled
-    let spelled: String?
+    let result: WordResult
     
     var body: some View {
         HStack {
-            Text("\(correct.info.char)")
-                .padding(.leading, 20)
-                .foregroundColor(correct.info.color)
-            Text("\(word.text)")
+            Text("\(symbol)")
+                .padding([.leading, .trailing], 20)
+                .foregroundColor(color)
+            
+            Text("\(result.word)")
             Spacer()
-            Text("\(spelled ?? "")")
+            
+            Text("\(spelled)")
             Spacer()
+        }
+    }
+    
+    var spelled: String {
+        return result.type == .incorrect ? result.spelled : ""
+    }
+    
+    var color: Color {
+        switch result.type {
+        case .correct:
+            return Color.green
+        case .incorrect:
+            return Color.red
+        case .notSpelled:
+            return Color.blue
+        }
+    }
+    
+    var symbol: String {
+        switch result.type {
+            case .incorrect:
+            return "\u{2717}"
+        case .correct:
+            return "\u{2713}"
+        case .notSpelled:
+            return "?"
         }
     }
 }
 
 struct ReportRow_Previews: PreviewProvider {
     static var previews: some View {
-        ReportRow(word: Word.example, correct: Spelled.incorrect, spelled: "ONEE")
+        ReportRow(result: WordResult(word: "ONE", spelled: "ONEE", type: .incorrect))
     }
 }
