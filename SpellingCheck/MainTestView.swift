@@ -18,7 +18,7 @@ struct MainTestView: View {
                 TestView(test: test)
             } else if test.mode == TestViewModel.DisplayMode.report {
                 ReportView(results: test.results)
-            } else if test.mode == TestViewModel.DisplayMode.spelling {
+            } else if test.mode == TestViewModel.DisplayMode.correctSpelling {
                 SpellingView(test: test)
             }
         }

@@ -13,11 +13,15 @@ import Combine
 class TestViewModel: ObservableObject {
     @Published var title: String = ""
     @Published var correctAnswers: Int = 0
-    @Published var currentSpellingType: ResultType = .notSpelled
-    @Published var mode: DisplayMode = DisplayMode.test
+    @Published var mode: DisplayMode = DisplayMode.test {
+        didSet {
+            if mode == DisplayMode.test {
+                speak()
+            }
+        }
+    }
     @Published var progress: Int = 0
     @Published var spelledWrong: Dictionary<Word, String> = [:]
-
     @Published var words = [Word]()
     var results = [WordResult]()
     
@@ -27,11 +31,6 @@ class TestViewModel: ObservableObject {
 
     init() {
         load()
-
-        progress = 0
-        correctAnswers = 0
-        spelledWrong = [:]
-        mode = DisplayMode.test
     }
     
     func load() {
@@ -46,8 +45,7 @@ class TestViewModel: ObservableObject {
     }
     
     func finish() {
-        let start = progress + (currentSpellingType == .notSpelled ? 0 : 1)
-        
+        let start = results.count
         for i in (start ..< words.count) {
             results.append(WordResult(word: words[i].text, spelled: "", type: .notSpelled))
         }
@@ -61,8 +59,7 @@ class TestViewModel: ObservableObject {
     
     func checkSpelling(word: String) {
         let correct = (currentWord.text == word)
-        
-        currentSpellingType = correct ? .correct : .incorrect
+        let currentSpellingType: ResultType = correct ? .correct : .incorrect
         results.append(WordResult(word: currentWord.text, spelled: word, type: currentSpellingType))
 
         if correct {
@@ -70,7 +67,7 @@ class TestViewModel: ObservableObject {
             goToNextWord()
         } else {
             spelledWrong[currentWord] = word
-            mode = DisplayMode.spelling
+            mode = DisplayMode.correctSpelling
         }
     }
     
@@ -79,9 +76,7 @@ class TestViewModel: ObservableObject {
             finish()
         } else {
             progress += 1
-            currentSpellingType = .notSpelled
             mode = DisplayMode.test
-            speak()
         }
     }
     
@@ -98,7 +93,7 @@ class TestViewModel: ObservableObject {
     enum DisplayMode {
         case test
         case report
-        case spelling
+        case correctSpelling
     }
     
     static let example = TestViewModel()
