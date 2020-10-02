@@ -46,5 +46,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "TestViewModel.checkSpelling(word:):TestViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "correctAnswers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>
