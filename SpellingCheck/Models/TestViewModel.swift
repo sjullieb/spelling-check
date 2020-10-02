@@ -96,5 +96,5 @@ class TestViewModel: ObservableObject {
         case correctSpelling
     }
     
-    static let example = TestViewModel()
+    static let example = TextTestViewModel()
 }

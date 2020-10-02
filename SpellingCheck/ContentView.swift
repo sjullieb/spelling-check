@@ -9,19 +9,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var testStarted = false
+    @State var wordsTestStarted = false
+    @State var textTestStarted = false
     
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: MainTestView(), isActive: $testStarted) {
+                NavigationLink(destination: MainTestView(), isActive: $wordsTestStarted) {
                     EmptyView()
                 }
                 Button(action: {
-                    self.testStarted = true
+                    self.wordsTestStarted = true
                 }) {
-                    Text("Start the test")
+                    Text("Words")
                 }
+                
+                NavigationLink(destination: MainTextTestView(), isActive: $textTestStarted) {
+                    EmptyView()
+                }
+                Button(action: {
+                    self.textTestStarted = true
+                }) {
+                    Text("Text")
+                }
+                .padding(20)
             }.navigationBarTitle("Spelling Check")
         }
     }

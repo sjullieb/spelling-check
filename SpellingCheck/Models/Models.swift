@@ -49,6 +49,11 @@ struct TestResult: Codable {
     var words: [WordResult]
 }
 
+struct TextTest: Codable {
+    var title: String
+    var text: String
+}
+
 enum ResultType: String, Decodable {
     case incorrect = "incorrect"
     case correct = "correct"
